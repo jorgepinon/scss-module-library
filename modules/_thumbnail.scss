@@ -1,0 +1,58 @@
+//  thumbnail
+//  ---------------------
+
+// aka the media element
+// can be used as thumbnail-list or thumbnail-grid
+
+.thumbnail-list {
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.thumbnail-grid {
+	margin-left: -2%;
+	overflow: hidden;
+	padding: 0;
+}
+.thumbnail-with-headline {
+	overflow: hidden;
+	line-height: 1.2;
+
+	.thumbnail-grid & {
+		float: left;
+		width: 48%;
+		margin-bottom: 10px;
+		margin-left: 2%;
+	}
+
+}
+
+.thumbnail-image-wrap {
+	position: relative;
+	display: block;
+	min-width: 100px;
+	max-width: 180px;
+	margin-bottom: 5px;
+	overflow: hidden;
+
+	.thumbnail-list & {
+		float: left;
+		width: 40%;
+		margin-right: 10px;
+	}
+	.thumbnail-grid & {
+		width: 100%;
+		max-width: none;
+		margin-bottom: 5px;
+	}
+
+}
+.thumbnail-image-wrap > img {
+	display: block;
+	background: #eee;
+	width: 100%;
+	height: auto;
+}
+.thumbnail-headline {
+	margin: 5px;
+}

@@ -1,0 +1,59 @@
+//  label-wrapped input
+//  ---------------------
+
+//  tappable radios and checkboxes
+
+//  <label class="label-wrapped-input">
+//      <input type="radio" name="name">
+//      <span>Label text</span>
+//  </label>
+
+
+.label-wrapped-input {
+	position: relative;
+	padding: 0;
+	height: $tap-height;
+	line-height: $tap-height;
+	vertical-align: middle;
+	@include border-radius();
+
+	span {
+		display: inline-block;
+		line-height: $tap-height;
+		padding: 0 10px;
+		padding-left: 30px;
+		@include border-radius();
+		min-height: $tap-height;
+		line-height: $tap-height;
+		background-color: $input-bg;
+
+		&:hover {
+			background-color: $input-hover-bg;
+		}
+
+	}
+
+}
+.label-wrapped-input input[type="radio"],
+.label-wrapped-input input[type="checkbox"] {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	font-size: 1em;
+	margin-top: -0.5em;
+
+	// active state
+	&:checked + span {
+		background-color: $input-active-bg;
+		color: $input-active-color;
+	}
+
+}
+
+
+.label-wrapped-input--inline {
+	display: inline-block;
+}
+.label-wrapped-input--inline + .label-wrapped-input--inline {
+	margin-left: 10px;
+}
