@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo scss module library</title>
+	<link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
+	<style media="screen">
+		hr + div {
+			overflow: hidden;
+		}
+	</style>
+
+	<script src="bundle.js"></script>
+	<script src="../node_modules/responsive-nav/responsive-nav.min.js" charset="utf-8"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+
+	<div class="page">
+
+		<div id="masthead" class="masthead">
+			syrup scss module library
+		</div>
+
+		<div class="row" style="max-width:1400px;margin-left:auto; margin-right: auto;">
+
+			<div class="medium-2 column">
+				<h2>modules</h2>
+
+				<!-- Requires responsive-nav.js -->
+				<button id="main-menu-toggle" class="btn closed">Menu</button>
+				<nav id="main-menu" class="nav-collapse">
+					<ul>
+						<li><a href="#masthead">masthead</a></li>
+						<li><a href="#type">type</a></li>
+						<li><a href="#links">links</a></li>
+						<li><a href="#animations">animations</a></li>
+						<li><a href="#grid">grid</a></li>
+						<li><a href="#lists">lists</a></li>
+						<li><a href="#navigation">navigation</a></li>
+						<li><a href="#tables">tables</a></li>
+						<li><a href="#alerts">alerts</a></li>
+						<li><a href="#tags">tags</a></li>
+						<li><a href="#figure">figure</a></li>
+						<li><a href="#card">card</a></li>
+						<li><a href="#forms">forms</a></li>
+						<li><a href="#button">button</a></li>
+						<li><a href="#callout">callout</a></li>
+						<li><a href="#drawer">drawer</a></li>
+						<li><a href="#popup">poput</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div class="medium-10 column">
+
+
+				<div id="type" class="type">
+					<h1>h1 heading</h1>
+
+					<h2>h2 heading</h2>
+
+					<h3>h3 heading</h3>
+
+					<h4>h4 heading</h4>
+
+					<p>
+						paragraph text.<sup>1</sup>
+					</p>
+					<p>
+						When their enemies were at the gates the Romans would suspend democracy and appoint one man to protect the city. It wasn't considered an honor, it was a public service.
+					</p>
+					<p>
+						Every year, I took a holiday. I went to Florence, this cafe on the banks of the Arno. Every fine evening, I would sit there and order a Fernet Branca. I had this fantasy, that I would look across the tables and I would see you there with a wife maybe a couple of kids. You wouldn't say anything to me, nor me to you. But we would both know that you've made it, that you were happy. I never wanted you to come back to Gotham. I always knew there was nothing here for you except pain and tragedy and I wanted something more for you than that. I still do.
+					</p>
+
+
+					<h3>blockquote</h3>
+					<blockquote>
+						Many years later, as he faced the firing squad, Colonel Aureliano Buendía was to remember that distant afternoon when his father took him to discover ice.<sup>2</sup>
+					</blockquote>
+
+
+					<h3>address</h3>
+					<address>
+						1600 Pennsylvania Avenue<br>
+						Washington D.C.
+					</address>
+
+					<h3>pre</h3>
+					<pre>
+						// pre is for letting a text’s whitespace appear as
+									entered
+					</pre>
+
+
+
+				</div>
+
+
+				<hr>
+
+				<div id="links">
+
+					<h2>links</h2>
+
+					<a href="#">a link</a>
+
+					<a href="#">with icon <span class="link--icon">icon</span></a>
+
+					<a href="#" class="link--add">.link--add</a>
+
+					<a href="#" class="link--delete">.link--delete</a>
+				</div>
+
+
+				<hr>
+
+				<div class="animations" id="animations">
+
+					<h2>animations</h2>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="grid">
+
+					<h2>grid</h2>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="lists">
+
+					<h2>lists</h2>
+
+					<h3>ul</h3>
+					<ul>
+						<li>list item</li>
+						<li>list item</li>
+						<li>list item</li>
+					</ul>
+
+					<h3>ol</h3>
+					<ol>
+						<li>list item</li>
+						<li>list item</li>
+						<li>list item</li>
+					</ol>
+
+					<h3>dl</h3>
+					<dl>
+						<dt>term</dt>
+						<dd><p>
+							definition text
+						</p></dd>
+					</dl>
+
+					<h3>.list--unstyled</h3>
+					<ul class="list--unstyled">
+						<li>list item</li>
+						<li>list item</li>
+						<li>list item</li>
+					</ul>
+
+					<h3>.list--inline</h3>
+					<ul class="list--inline">
+						<li>list item</li>
+						<li>list item</li>
+						<li>list item</li>
+					</ul>
+
+					<h3>.checklist</h3>
+					<ul class="checklist">
+						<li>list item</li>
+						<li>list item</li>
+						<li>list item</li>
+					</ul>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="navigation">
+
+					<h2>navigation</h2>
+
+					<nav>
+						<a href="#">nav item 1</a>
+						<a href="#">nav item 2</a>
+						<a href="#">nav item 3</a>
+					</nav>
+
+					<h3>.nav--stacked</h3>
+					<nav class="nav--stacked">
+						<a href="#">nav item 1</a>
+						<a href="#">nav item 2</a>
+						<a href="#">nav item 3</a>
+					</nav>
+				</div>
+
+
+
+				<hr>
+
+
+				<div id="tables">
+
+					<h2>tables</h2>
+
+					<table>
+						<caption>The table’s caption</caption>
+						<tfoot>
+							tfoot is where you might cite a source or metadata about the data
+						</tfoot>
+						<thead>
+							<th>
+								th 1
+							</th>
+							<th>
+								th 2
+							</th>
+							<th>
+								th 3
+							</th>
+						</thead>
+
+						<tbody>
+							<td>
+								td 1
+							</td>
+							<td>
+								td 2
+							</td>
+							<td>
+								td 3
+							</td>
+						</tbody>
+					</table>
+
+					<h3>.table--bordered</h3>
+					<table class="table--bordered">
+						<caption>The table’s caption</caption>
+						<tfoot>
+							tfoot is where you might cite a source or metadata about the data
+						</tfoot>
+						<thead>
+							<th>
+								th 1
+							</th>
+							<th>
+								th 2
+							</th>
+							<th>
+								th 3
+							</th>
+						</thead>
+
+						<tbody>
+							<td>
+								td 1
+							</td>
+							<td>
+								td 2
+							</td>
+							<td>
+								td 3
+							</td>
+						</tbody>
+					</table>
+
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="alerts">
+
+					<h2>alert</h2>
+
+					<div class="alert">
+						alert text is usually a single line. keep it short.
+					</div>
+
+					<div class="alert alert--success">
+						alert success!
+					</div>
+
+					<div class="alert alert--warning">
+						alert warning !!!
+					</div>
+
+					<div class="alert alert--error">
+						alert error :(
+					</div>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="tags">
+
+					<h2>tags</h2>
+
+					<div class="tag">
+						tag text
+					</div>
+
+					<div class="tag tag--success">
+						tag success
+					</div>
+
+					<div class="tag tag--warning">
+						tag warning
+					</div>
+
+					<div class="tag tag--error">
+						tag error
+					</div>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="figure">
+
+					<h2>figure</h2>
+
+					<figure>
+						<a href="#">
+							<img src="http://placehold.it/300x200" alt="" />
+						</a>
+						<figcaption>
+							figcaption bare text
+						</figcaption>
+					</figure>
+
+
+					<figure>
+						<a href="#">
+							<img src="http://placehold.it/300x200" alt="" />
+						</a>
+						<figcaption>
+							<h3>figcaption title</h3>
+							<p>
+								figcaption paragraph text
+							</p>
+						</figcaption>
+					</figure>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="card" class="cards">
+
+					<h2>card</h2>
+
+					<figure class="card">
+						<a href="#">
+							<img class="card-image" src="http://placehold.it/200x150" alt="" />
+						</a>
+						<figcaption class="card-caption">
+							figcaption bare text
+
+							<footer class="card-action">
+								<a class="link--padded" href="#">delete</a>
+							</footer>
+
+						</figcaption>
+
+					</figure>
+
+
+					<figure class="card">
+						<a href="#">
+							<img class="card-image" src="http://placehold.it/200x150" alt="" />
+						</a>
+						<figcaption class="card-caption">
+							<h3>figcaption title</h3>
+							<p>
+								figcaption paragraph text
+							</p>
+						</figcaption>
+					</figure>
+
+				</div>
+
+
+
+				<hr>
+
+				<div id="forms">
+
+					<h2>forms</h2>
+
+					<form class="form" action="index.html" method="post">
+						<div class="control-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" value="" placeholder="Joe Cool">
+							<small class="help--block">This is input help</small>
+						</div>
+
+						<div class="control-group has-error">
+							<label for="text2">.has-error</label>
+							<input type="text" id="text2" class="has-error" name="text2" value="">
+						</div>
+						<div class="control-group">
+							<label for="textarea">Text</label>
+							<textarea placeholder="enter your text"></textarea>
+						</div>
+
+
+						<div class="control-group">
+							<label>
+								<input type="checkbox" name="option1" value="option1"> Option 1
+							</label>
+							<label>
+								<input type="checkbox" name="option2" value="option2"> Option 2
+							</label>
+							<label>
+								<input type="checkbox" name="option3" value="option3"> Option 3
+							</label>
+						</div>
+
+
+						<div class="control-group">
+							<label>
+								<input type="radio" name="option1" value="option1"> Option 1
+							</label>
+							<label>
+								<input type="radio" name="option2" value="option2"> Option 2
+							</label>
+							<label>
+								<input type="radio" name="option3" value="option3"> Option 3
+							</label>
+						</div>
+
+
+						<div class="control-group">
+							<label for="color">color</label>
+							<select>
+								<option value="red">red</option>
+								<option value="yellow">yellow</option>
+								<option value="blue">blue</option>
+							</select>
+						</div>
+					</form>
+
+				</div>
+
+
+
+				<hr id="btn">
+
+
+				<h2>buttons</h2>
+				<div class="row">
+					<div class="small-6 column">
+						<button type="button" class="btn--link">.btn--link</button>
+						<p><a href="#" class="btn">.btn</a></p>
+						<p><a href="#" class="btn btn--styled">.btn--styled</a></p>
+						<p><a href="#" class="btn btn--float">.btn--float</a></p>
+						<p><a href="#" class="btn btn--styled btn--float">.btn--styled.btn--float</a></p>
+						<p><a href="#" class="btn btn--disabled">.btn--disabled</a></p>
+						<p><a href="#" class="btn btn--add">.btn--add</a></p>
+						<p><a href="#" class="btn btn--delete">.btn--delete</a></p>
+						<p><a href="#" class="btn bounce">.btn.bounce.infinite</a></p>
+
+						<p><a href="#" class="btn btn--submit">.btn--has-icon inline checkmark svg</a></p>
+
+						<script>
+							$('.btn--submit').on('click', function() {
+								event.preventDefault();
+								$(this).addClass('btn--has-icon').prepend('<svg class="icon icon--inverse animated-check"><use xlink:href="#icon--check" /></svg> ');
+							});
+						</script>
+					</div>
+					<div class="small-6 column">
+						<p><a href="#" class="link--padded">.link--padded</a></p>
+						<p><a href="#" class="link--disabled">.link--disabled</a></p>
+						<p><a href="#" class="link--add">.link--add</a></p>
+						<p><a href="#" class="link--delete">.link--delete</a></p>
+
+						<button class="btn is-loading" type="button"><span class="label-text">.btn.is-loading</span></button> &nbsp;
+
+					</div>
+
+				</div>
+
+
+
+				<hr id="drawer">
+
+
+				<h2>drawer</h2>
+				<div class="row">
+					<div class="medium-9 large-6 column">
+
+						<div class="drawer is-drawer-closed">
+
+							<div class="drawer-hd">
+								<h3 class="drawer-title"><span class="icon-arrow_right icon-xs"></span>
+										Drawer label: use trigger action text
+								</h3>
+							</div>
+
+							<div class="drawer-bd">
+
+								<h4>Body title</h4>
+
+								<p>Body content can be accommodate any html</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+				</div>
+
+
+
+
+				<div class="footnotes">
+					<p>
+						1. Footnotes. Give credit where credit is due.
+					</p>
+					<p>
+						2. <i>One Hundred Years of Solitude</i>
+					</p>
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+
+
+		<div class="footer-push"></div>
+
+	</div>
+
+	<footer role="contentinfo">
+		sticky-footer
+	</footer>
+
+</body>
+</html>

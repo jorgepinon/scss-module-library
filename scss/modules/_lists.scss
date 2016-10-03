@@ -1,5 +1,22 @@
-//  lists
-//  ---------------------
+//   =LISTS   ==================================================
+ul, ol {
+	padding: 0;
+	margin: 0 0 1.5em 1.5em;
+}
+ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
+ol { list-style: decimal; }
+li {
+	line-height: $base-line-height;
+	margin-bottom: .5em;
+}
+
+dl { margin-bottom: 1.5em; }
+dt, dd { line-height: 1.5; }
+dt {
+	font-weight: bold;
+}
+dd { margin-left: 0; }
+
 
 .list--unstyled {
 	margin: 0; padding: 0;

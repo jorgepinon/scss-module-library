@@ -1,0 +1,33 @@
+figure {
+	padding: 1em;
+	margin: 3em 0;
+	max-width: 100%;
+	overflow: hidden;
+
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	}
+
+}
+
+figcaption {
+	padding: 1em;
+	text-align: center;
+	color: #888;
+	max-width: 38em;
+	margin: 0 auto;
+
+	.title {
+		font-size: 1em;
+		color: $page-color;
+	}
+}
+
+@media all and (min-width: 768px) {
+	figcaption {
+		font-size: 0.875em;
+	}
+}

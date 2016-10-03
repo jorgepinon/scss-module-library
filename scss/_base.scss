@@ -122,6 +122,10 @@ p {
 	font-size: 1em;
 }
 
+blockquote {
+	margin: 1em 3em;
+	max-width: 36em;
+}
 small {
 	font-size: .85em;
 }
@@ -155,15 +159,22 @@ h4, .delta {
 	font-size: 1em;
 }
 
-.micro {
-	font-size: 0.875em;
-}
-
 hr {
 	margin: 1.5em 0;
 	border: 0;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #fff;
+
+	&.or:after {
+		content: "or";
+		display: inline-block;
+		position: relative;
+		top: -0.75em;
+		text-transform: uppercase;
+		padding: 0 0.5em;
+		background: white;
+		color: #777;
+	}
 }
 
 address {
@@ -179,10 +190,6 @@ img {
 	vertical-align: middle;
 }
 
-figure {
-	padding: 0; margin: 0;
-}
-
 ins {
 	text-decoration: none;
 }
@@ -190,32 +197,4 @@ pre {
 	font-family: inherit;
 	white-space: pre-wrap;
 	word-wrap: break-word;
-}
-
-//   =LISTS   ==================================================
-ul, ol {
-	padding: 0;
-	margin: 0 0 1.5em 1.5em;
-}
-ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
-ol { list-style: decimal; }
-li {
-	line-height: $base-line-height;
-	margin-bottom: .5em;
-}
-
-dl { margin-bottom: 1.5em; }
-dt, dd { line-height: 1.5; }
-dt {
-	font-weight: bold;
-}
-dd { margin-left: 0; }
-
-
-//   =TABLES   ==================================================
-table {
-	max-width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0;
-	background-color: transparent;
 }

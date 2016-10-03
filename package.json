@@ -1,0 +1,37 @@
+{
+  "name": "scss-module-library",
+  "version": "1.0.0",
+  "description": "My favorite UI library!",
+  "keywords": [
+    "ui",
+    "modules",
+    "components"
+  ],
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint src/**.js",
+    "js-bundle": "cat node_modules/jquery/dist/jquery.min.js src/modules/*.js > demo/bundle.js",
+    "build-js": "npm run js-bundle",
+    "watch-js": "watch-run -p 'src/**' & npm run build-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgepinon/scss-module-library.git"
+  },
+  "author": "Jorge Piñon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorgepinon/scss-module-library/issues"
+  },
+  "homepage": "https://github.com/jorgepinon/scss-module-library#readme",
+  "devDependencies": {
+    "eslint": "^3.2.2",
+    "browserify": "latest",
+    "uglify-js": "~2.4",
+    "watch-run": "~1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "responsive-nav": "^1.0.39"
+  }
+}

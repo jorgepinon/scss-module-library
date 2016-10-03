@@ -27,8 +27,8 @@ $tooltip-border-radius 		: 2px !default;
 }
 .tooltip-content {
 	bottom: 120%;
-	@include rem(padding, 6px 16px);
-	@include rem(font-size, 12);
+	padding: 0.5em 1em;
+	font-size: 12px;
 	background: $tooltip-bg;
 	color: $tooltip-color;
 }

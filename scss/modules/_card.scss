@@ -1,0 +1,61 @@
+// initially horizontal layout
+.card {
+	margin: 0 0 1em 0;
+	padding: 0;
+	overflow: hidden;
+	background: $white;
+	border-top: solid 1px #eee;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+	.card-image {
+		float: left;
+		width: 33%;
+		box-shadow: none; // override figure styling
+	}
+
+	figcaption {
+		padding: 0.5em 1em;
+		text-align: left;
+		overflow: hidden;
+		line-height: 1.2;
+	}
+
+	.card-action {
+		padding: 1em;
+	}
+
+}
+
+// wrap in .cards container for size control
+.cards {
+	clear: left;
+	list-style: none;
+}
+
+@media all and (min-width: 768px) {
+	.cards {
+		margin-right: -1em;
+		margin-left: -1em;
+		overflow: hidden;
+	}
+	.cards .card {
+		float: left;
+		width: 30%;
+		margin-left: 1em;
+		border: solid 1px #eee;
+
+		.card-image {
+			width: 100%;
+		}
+
+		figcaption {
+			text-align: center;
+			height: 5em;
+		}
+	}
+}
+@media all and (min-width: 1024px) {
+	.cards .card {
+		width: 23%;
+	}
+}
