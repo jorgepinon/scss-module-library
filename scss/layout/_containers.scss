@@ -43,26 +43,6 @@ $page-border-left	: 0 !default;
 
 }
 
-@include respond-min($breakpoint-medium) {
-
-	// sticky footer
-	.container {
-		min-height: 100%;
-		// equal to footer height
-		margin-bottom: -$footer-height;
-		&:after {
-			content: "";
-			display: block;
-		}
-	}
-	.container:after,
-	footer[role="contentinfo"] {
-	  // must be the same height as footer
-	  height: $footer-height;
-	}
-
-}
-
 @include respond-min($breakpoint-xl) {
 	#pg-container:after {
 		content: "gt1280";

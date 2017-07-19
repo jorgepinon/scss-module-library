@@ -10,7 +10,7 @@
   "main": "index.html",
   "scripts": {
     "lint": "eslint src/**.js",
-    "js-bundle": "cat node_modules/jquery/dist/jquery.min.js src/modules/*.js > demo/bundle.js",
+    "js-bundle": "cat node_modules/jquery/dist/jquery.min.js src/vendor/*.js src/modules/*.js > demo/bundle.js",
     "build-js": "npm run js-bundle",
     "watch-js": "watch-run -p 'src/**' & npm run build-js"
   },

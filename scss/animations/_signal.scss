@@ -1,0 +1,61 @@
+/* Signal waves (expanding circles) */
+/* usage:
+	<div class="signal"><span></span></div>
+*/
+
+$signal-base-size: 50px;
+$signal-circles-color: #249D7F;
+
+.signal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $signal-base-size;
+  height: $signal-base-size;
+  z-index: 10;
+ }
+ .signal:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $signal-circles-color;
+    border-radius: 100%;
+    -webkit-animation: pulse 3s linear  infinite;
+    animation: pulse 3s linear infinite;
+}
+
+ .signal:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $signal-circles-color;
+    border-radius: 100%;
+    -webkit-animation: pulse 3s linear  infinite;
+    animation: pulse 3s linear infinite;
+    animation-delay: -1.5s;
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+

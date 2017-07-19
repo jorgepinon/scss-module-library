@@ -11,14 +11,14 @@
   clear: both;
 }
 
-.callout, .drawer-hd {
+.callout {
   *zoom: 1;
 }
-.callout:before, .drawer-hd:before, .callout:after, .drawer-hd:after {
+.callout:before, .callout:after {
   display: table;
   content: "";
 }
-.callout:after, .drawer-hd:after {
+.callout:after {
   clear: both;
 }
 
@@ -187,7 +187,6 @@
 }
 
 html, body {
-  font-size: 100%;
   height: 100%;
   min-height: 100%;
 }
@@ -197,6 +196,7 @@ html {
   -webkit-tap-highlight-color: #ffb1ff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  font-size: 15px;
 }
 
 body {
@@ -205,24 +205,19 @@ body {
   padding: 0;
   background-color: #fafafa;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 100%;
   line-height: 1.5;
   color: #310031;
 }
 
-.color-inverse {
-  background-color: #310031;
-  color: #fafafa;
-}
-
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 14px;
+  html {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
-  body {
-    font-size: 15px;
+  html {
+    font-size: 18px;
   }
 }
 a {
@@ -480,6 +475,60 @@ pre {
   animation-iteration-count: 20;
 }
 
+/* Signal waves (expanding circles) */
+/* usage:
+	<div class="signal"><span></span></div>
+*/
+.signal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+.signal:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #249D7F;
+  border-radius: 100%;
+  -webkit-animation: pulse 3s linear  infinite;
+  animation: pulse 3s linear infinite;
+}
+
+.signal:after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #249D7F;
+  border-radius: 100%;
+  -webkit-animation: pulse 3s linear  infinite;
+  animation: pulse 3s linear infinite;
+  animation-delay: -1.5s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
 .row {
   width: 100%;
   margin-left: auto;
@@ -611,10 +660,6 @@ pre {
 }
 
 @media screen and (min-width: 600px) {
-  .column {
-    padding-left: 1.5em;
-  }
-
   .medium-centered {
     margin-left: auto;
     margin-right: auto;
@@ -790,7 +835,9 @@ footer[role="contentinfo"], .footer-push {
 
 footer[role="contentinfo"] {
   position: relative;
-  padding-top: 50px;
+  background-color: #eee;
+  color: #444;
+  padding: 20px;
 }
 
 .masthead {
@@ -897,7 +944,7 @@ ol {
 }
 
 li {
-  line-height: 1.4;
+  line-height: 1.6;
   margin-bottom: .5em;
 }
 
@@ -1537,6 +1584,93 @@ button + .help--block {
     display: none;
   }
 }
+/*
+// accessible dropdown nav
+*/
+/*! requires Adobe's http://adobe-accessibility.github.io/Accessible-Mega-Menu/
+// http://terrillthompson.com/tests/menus/accessible-mega-menu/js/jquery-accessibleMegaMenu.js
+ */
+/* mega menu list */
+.nav-menu {
+  display: block;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 15;
+}
+
+/* a top level navigation item in the mega menu */
+.nav-item {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item > a,
+.sub-nav li > a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  height: 2.6em;
+}
+.nav-item > a:hover,
+.sub-nav li > a:hover {
+  text-decoration: none;
+}
+.nav-item > a:hover, .nav-item > a:focus, .nav-item > a.open,
+.sub-nav li > a:hover,
+.sub-nav li > a:focus,
+.sub-nav li > a.open {
+  background-color: #eee;
+}
+
+/* first descendant link within a top level navigation item */
+.nav-item > a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  height: 2.6em;
+  	/* focus/open states of first descendant link within a top level
+     navigation item */
+}
+.nav-item > a:hover {
+  text-decoration: none;
+}
+.nav-item > a.open {
+  z-index: 1;
+}
+
+/* sub-navigation panel */
+.sub-nav {
+  position: absolute;
+  display: none;
+  top: 2.6em;
+  background-color: #eee;
+}
+
+.nav-item:hover .sub-nav {
+  display: block;
+}
+
+/* sub-navigation panel open state */
+/* list of items within sub-navigation panel */
+.sub-nav ul {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: top;
+  margin: 0 1em 0 0;
+  padding: 0;
+}
+
+/* list item within sub-navigation panel */
+.sub-nav li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .callout {
   padding: 2em;
   background: #fff;
@@ -1607,62 +1741,6 @@ button + .help--block {
     width: 23%;
   }
 }
-.drawer {
-  position: relative;
-  clear: both;
-  margin-bottom: 1.5em;
-  background-color: #fafafa;
-  color: #310031;
-  text-align: left;
-}
-.drawer.is-drawer-open .icon--arrow {
-  background-position: -148px -53px;
-}
-
-.drawer-hd {
-  display: block;
-  padding: .5em 1em;
-  line-height: 24px;
-  cursor: pointer;
-  background-color: #fafafa;
-  color: #177a70;
-  border: 1px solid #d2d2d2;
-}
-
-.drawer-title {
-  line-height: 24px;
-  margin-bottom: 0;
-  overflow: hidden;
-}
-.drawer-title span[class^="icon"] {
-  vertical-align: baseline;
-}
-
-.is-drawer-open span[class^="icon-arrow_down"] {
-  -moz-transform: rotate(360);
-  -ms-transform: rotate(360);
-  -webkit-transform: rotate(360);
-  transform: rotate(360);
-}
-
-.drawer-bd {
-  width: 100%;
-  background-color: #fafafa;
-  padding: .5em 1.5em;
-  border: 1px solid #d2d2d2;
-  border-top: 0;
-  overflow: hidden;
-}
-.is-drawer-closed .drawer-bd {
-  display: none;
-}
-.drawer--overlay .drawer-bd {
-  position: absolute;
-}
-.drawer--inline .drawer-bd {
-  position: relative;
-}
-
 /*
 <div class="swatch-card">
     <div class="swatch swatch--textcolor">

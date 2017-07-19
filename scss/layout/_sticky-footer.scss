@@ -2,13 +2,13 @@
 //  ---------------------
 
 $footer-height : 200px;
+$footer-bg :  #eee;
+$footer-color :  #444;
 
 .page {
 	position: relative;
 	min-height: 100%;
-
 	margin-bottom: -$footer-height;
-
 }
 
 footer[role="contentinfo"], .footer-push {
@@ -17,5 +17,7 @@ footer[role="contentinfo"], .footer-push {
 
 footer[role="contentinfo"] {
 	position: relative;
-	padding-top: 50px;
+	background-color: $footer-bg;
+	color: $footer-color;
+	padding: 20px;
 }

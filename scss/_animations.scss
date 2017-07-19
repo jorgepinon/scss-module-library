@@ -1,29 +1,5 @@
 
-@include keyframes(bounce) {
-    from, 15%, 40%, 56%, 65%, to {
-      @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.0));
-      @include transform(translate3d(0,0,0));
-    }
+@import "./animations/bounce";
+@import "./animations/signal";
 
-    30% {
-      @include animation-timing-function(cubic-bezier(0.755, 0.050, 0.855, 0.060));
-      @include transform(translate3d(0, -10px, 0));
-    }
 
-    50% {
-      @include animation-timing-function(cubic-bezier(0.755, 0.050, 0.855, 0.060));
-      @include transform(translate3d(0, -7px, 0));
-    }
-
-    60% {
-      @include animation-timing-function(cubic-bezier(0.755, 0.050, 0.855, 0.060));
-      @include transform(translate3d(0, -3px, 0));
-    }
-
-}
-.bounce {
-    @include animation-delay(2s);
-    @include animation-duration(2s);
-    @include animation-name('bounce');
-	@include animation-iteration-count(20);
-}

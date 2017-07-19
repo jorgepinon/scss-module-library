@@ -46,7 +46,6 @@
 						<li><a href="#forms">forms</a></li>
 						<li><a href="#button">button</a></li>
 						<li><a href="#callout">callout</a></li>
-						<li><a href="#drawer">drawer</a></li>
 						<li><a href="#popup">poput</a></li>
 					</ul>
 				</nav>
@@ -54,6 +53,65 @@
 
 
 			<div class="medium-10 column">
+
+
+		<nav id="dropmenu">
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="somepage.html">Dropdown menu</a>
+					<div class="sub-nav">
+						<!-- can have multiple subnavs -->
+						<ul class="sub-nav-group">
+							<li><a href="somepage.html">Accessibility</a></li>
+							<li><a href="somepage.html">Admissions</a></li>
+							<li><a href="somepage.html">Diversity</a></li>
+							<li><a href="somepage.html">Governance</a></li>
+						</ul>
+						<ul class="sub-nav-group">
+							<li><a href="somepage.html">Leadership</a></li>
+							<li><a href="somepage.html">Mission Statement</a></li>
+							<li><a href="somepage.html">Research</a></li>
+							<li><a href="somepage.html">Teaching</a></li>
+						</ul>
+						<ul class="sub-nav-group">
+							<li><a href="somepage.html">Contact Us</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<script>
+			$(document).ready(function() {
+
+				$('#dropmenu').accessibleMegaMenu({
+					/* prefix for generated unique id attributes, which are required
+					   to indicate aria-owns, aria-controls and aria-labelledby */
+					uuidPrefix: "accessible-megamenu",
+
+					/* css class used to define the megamenu styling */
+					menuClass: "nav-menu",
+
+					/* css class for a top-level navigation item in the megamenu */
+					topNavItemClass: "nav-item",
+
+					/* css class for a megamenu panel */
+					panelClass: "sub-nav",
+
+					/* css class for a group of items within a megamenu panel */
+					panelGroupClass: "sub-nav-group",
+
+					/* css class for the hover state */
+					hoverClass: "hover",
+
+					/* css class for the focus state */
+					focusClass: "focus",
+
+					/* css class for the open state */
+					openClass: "open"
+				});
+			});
+		</script>
+
 
 
 				<div id="type" class="type">
@@ -66,13 +124,16 @@
 					<h4>h4 heading</h4>
 
 					<p>
-						paragraph text.<sup>1</sup>
+						Paragraph text.
 					</p>
 					<p>
-						When their enemies were at the gates the Romans would suspend democracy and appoint one man to protect the city. It wasn't considered an honor, it was a public service.
+						This set of SCSS modules is bare bones by design. It's my own library of UI modules that I can copy from for new projects and customize as needed. However, the default CSS used in each module make it usable as-is for modern browsers. It currently has modules mostly usable for publishing, although I'm adding other web-app type UI pieces as I need them.
 					</p>
 					<p>
-						Every year, I took a holiday. I went to Florence, this cafe on the banks of the Arno. Every fine evening, I would sit there and order a Fernet Branca. I had this fantasy, that I would look across the tables and I would see you there with a wife maybe a couple of kids. You wouldn't say anything to me, nor me to you. But we would both know that you've made it, that you were happy. I never wanted you to come back to Gotham. I always knew there was nothing here for you except pain and tragedy and I wanted something more for you than that. I still do.
+						I was inspired by, and downright stole from, some well known favorites<sup><a href="#footnote-1">1</a></sup>.
+					</p>
+					<p>
+						Everything should be responsive, and in fact was conceived as small-screen-first. Accessibility is also built-in, but that's mostly true because it's made up of core HTML elements for the most part. Look at _collapsible-menu.scss and _dropdown-menu.scss for the more complex ones. 
 					</p>
 
 
@@ -121,6 +182,15 @@
 
 					<h2>animations</h2>
 
+					<div class="row">
+						<div class="small-4 large-2 column">
+							<div class="signal"><span>Signal</span></div>
+						</div>
+						<div class="small-4 large-2 column">
+							<a href="#" class="btn bounce">Bounce</a>
+						</div>
+					</div>
+
 				</div>
 
 
@@ -130,6 +200,21 @@
 				<div id="grid">
 
 					<h2>grid</h2>
+
+					<div class="row">
+						<div class="small-12 medium-6 large-4 column">
+							<p>12-column grid. Inspired by Foundation 3 (or 4?) and never revisited. It works.</p>
+						</div>
+						<div class="small-12 medium-6 large-4 column">
+							<p>That said, I'm aware that the CSS grid module is imminent and possibly better. Also, Foundation itself has a different approach to the grid in later versions worth looking at.</p>
+						</div>
+						<div class="small-12 medium-6 large-4 column">
+							<p>Column classnames are small screen first, which is why I like it.</p>
+						</div>
+						<div class="small-12 column">
+							<p>Example: .small-12 .medium-6 .large-4</p>
+						</div>
+					</div>
 
 				</div>
 
@@ -507,48 +592,17 @@
 
 
 
-				<hr id="drawer">
-
-
-				<h2>drawer</h2>
-				<div class="row">
-					<div class="medium-9 large-6 column">
-
-						<div class="drawer is-drawer-closed">
-
-							<div class="drawer-hd">
-								<h3 class="drawer-title"><span class="icon-arrow_right icon-xs"></span>
-										Drawer label: use trigger action text
-								</h3>
-							</div>
-
-							<div class="drawer-bd">
-
-								<h4>Body title</h4>
-
-								<p>Body content can be accommodate any html</p>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-
-
-				</div>
-
-
 
 
 				<div class="footnotes">
-					<p>
-						1. Footnotes. Give credit where credit is due.
-					</p>
-					<p>
-						2. <i>One Hundred Years of Solitude</i>
-					</p>
+					<ol>
+						<li id="footnote-1">
+							Inspiration: <i><a href="https://stuffandnonsense.co.uk/projects/320andup/">360andup</a></i>, <i><a href="http://foundation.zurb.com">Foundation</a></i>, <i><a href="http://getbootstrap.com">Bootstrap</a></i>, <i><a href="http://inuitcss.com">InuitCSS</a></i>, and some others.
+						</li>
+						<li>
+							Footnotes. Give credit where credit is due.
+						</li>
+					</ol>
 				</div>
 
 
@@ -565,7 +619,7 @@
 	</div>
 
 	<footer role="contentinfo">
-		sticky-footer
+		<p>sticky-footer</p>
 	</footer>
 
 </body>
