@@ -4,12 +4,6 @@
 	<meta charset="utf-8">
 	<title>Demo scss module library</title>
 	<link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
-	<style media="screen">
-		hr + div {
-			overflow: hidden;
-		}
-	</style>
-
 </head>
 <body>
 
@@ -35,6 +29,7 @@
 						<li><a href="#grid">grid</a></li>
 						<li><a href="#lists">lists</a></li>
 						<li><a href="#navigation">navigation</a></li>
+						<li><a href="#dropdown">dropdown</a></li>
 						<li><a href="#tables">tables</a></li>
 						<li><a href="#alerts">alerts</a></li>
 						<li><a href="#tags">tags</a></li>
@@ -50,27 +45,6 @@
 
 
 			<div class="medium-10 column">
-
-
-<div class="dropdown" data-directive="dropdown">
-    <button type="button" data-behaviour="button" id="foo">Dropdown menu button</button>
-    <div id="menu-01" data-behaviour="menu">
-        <ul>
-            <li>
-                <a data-behaviour="option" href="">Option 1</a>
-            </li>
-            <li>
-                <a data-behaviour="option" href="">Option 2</a>
-            </li>
-            <li>
-                <a data-behaviour="option" href="">Option 3</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-
-
 
 
 				<div id="type" class="type">
@@ -251,6 +225,33 @@
 						<a href="#">nav item 3</a>
 					</nav>
 				</div>
+
+
+
+				<hr>
+
+				<div id="dropdown">
+
+					<h2>Accessible Dropdown</h2>
+
+					<div class="dropdown" data-directive="dropdown">
+						<button type="button" data-behaviour="button" class="dropdown-trigger">Dropdown</button>
+						<div id="menu-01" data-behaviour="menu">
+							<ul>
+								<li>
+									<a data-behaviour="option" href="">Option 1</a>
+								</li>
+								<li>
+									<a data-behaviour="option" href="">Option 2</a>
+								</li>
+								<li>
+									<a data-behaviour="option" href="">Option 3</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 
 
 

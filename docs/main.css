@@ -1580,30 +1580,41 @@ button + .help--block {
   }
 }
 .dropdown {
-  width: 10em;
-  border: 1px solid #CCC;
+  display: inline-block;
+  position: relative;
+  max-width: 10em;
 }
 
 .dropdown ul {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
   margin: 0;
   padding: 0;
-  list-style-type: 0;
+  list-style: none;
+  background: #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown li {
+  margin: 0;
+  padding: 0;
 }
 
 .dropdown a,
 .dropdown button {
   display: block;
   padding: .25em .5em;
+  margin: 0;
   text-decoration: none;
-  color: #000;
-  background-color: #FFF;
+  border: 0;
 }
 
 .dropdown button {
-  border: 0;
-  font: inherit;
+  height: 2em;
 }
 
+/* better to use svg icons for these */
 .dropdown.is-closed > button:after {
   content: ' \21D2';
 }
@@ -1614,8 +1625,7 @@ button + .help--block {
 
 .dropdown a:hover,
 .dropdown a:focus {
-  color: #07B4BA;
-  background-color: #EEE;
+  background-color: #ddd;
 }
 
 .callout {
