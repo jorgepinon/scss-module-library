@@ -2,14 +2,18 @@
 SCSS Module Library
 =========
 
-This is a collection of SCSS modules for the most common UI patterns that I've come across in my own personal web app projects.
+This is a collection of SCSS modules for the most common UI patterns that I've come across in my own personal web app projects. It is barebones by design. The goal is to keep a library of modules that I (or you) can copy and plug into a new project and then apply appropriate styling.
 
-There's some use of Compass library which I may remove over time but really is just for prefixing and build commands.
+[See the demo page](http://jorgepinon.github.io/scss-module-library/).
+
+
+There's some use of Compass library which I may remove over time but really is just for CSS prefixing and local development.
 
 This project is inspired by:
 - [the original 360andup]('https://github.com/malarkey/320andup/')
 - [the original inuit.css]('https://github.com/inuitcss')
-- [Foundation grid]('http://foundation.zurb.com/')
+- [Foundation grid]('http://foundation.zurb.com')
+- [Twitter Bootstrap]('http://getbootstrap.com')
 
 Suggestions welcome.
 
