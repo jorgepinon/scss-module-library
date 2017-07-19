@@ -1588,7 +1588,7 @@ button + .help--block {
 .dropdown ul {
   position: absolute;
   z-index: 10;
-  width: 100%;
+  min-width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1604,23 +1604,20 @@ button + .help--block {
 .dropdown a,
 .dropdown button {
   display: block;
-  padding: .25em .5em;
+  padding: .25em 1em;
   margin: 0;
   text-decoration: none;
   border: 0;
+  white-space: nowrap;
 }
 
 .dropdown button {
   height: 2em;
+  border-radius: 1em;
 }
 
-/* better to use svg icons for these */
-.dropdown.is-closed > button:after {
-  content: ' \21D2';
-}
-
-.dropdown.is-open > button:after {
-  content: ' \21D3';
+.dropdown.is-open button {
+  border-radius: 1em 1em 0 0;
 }
 
 .dropdown a:hover,
