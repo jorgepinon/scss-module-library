@@ -1,91 +1,38 @@
-/*
-// accessible dropdown nav
-*/
-/*! requires Adobe's http://adobe-accessibility.github.io/Accessible-Mega-Menu/
-// http://terrillthompson.com/tests/menus/accessible-mega-menu/js/jquery-accessibleMegaMenu.js
- */
+.dropdown {
+	width: 10em;
+	border: 1px solid #CCC;
+}
 
-/* mega menu list */
-.nav-menu {
-	display: block;
-	position: relative;
-	list-style: none;
+.dropdown ul {
 	margin: 0;
 	padding: 0;
-	z-index: 15;
+	list-style-type: 0;
 }
 
-/* a top level navigation item in the mega menu */
-.nav-item {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
-// common top and subnav link styles
-.nav-item > a,
-.sub-nav li > a {
-	position: relative;
-	display: inline-block;
-	padding: 0.5em 1em;
-	height: 2.6em;
-
-	&:hover {
-		text-decoration: none;
-	}
-
-	&:hover, &:focus, &.open {
-		background-color: #eee;
-	}
-}
-
-/* first descendant link within a top level navigation item */
-.nav-item > a {
-	position: relative;
-	display: inline-block;
-	padding: 0.5em 1em;
-	height: 2.6em;
-
-	&:hover {
-		text-decoration: none;
-	}
-
-	/* focus/open states of first descendant link within a top level
-   navigation item */
-	&.open {
-		z-index: 1;
-	}
-}
-
-/* sub-navigation panel */
-.sub-nav {
-	position: absolute;
-	display: none;
-	top: 2.6em;
-	background-color: #eee;
-}
-
-.nav-item:hover .sub-nav {
+.dropdown a,
+.dropdown button {
 	display: block;
-}
-/* sub-navigation panel open state */
-//.sub-nav.open {
-//	display: block;
-//}
-
-/* list of items within sub-navigation panel */
-.sub-nav ul {
-	display: inline-block;
-	list-style-type: none;
-	vertical-align: top;
-	margin: 0 1em 0 0;
-	padding: 0;
+	padding: .25em .5em;
+	text-decoration: none;
+	color: #000;
+	background-color: #FFF;
 }
 
-/* list item within sub-navigation panel */
-.sub-nav li {
-	display: block;
-	margin: 0;
-	padding: 0;
+.dropdown button {
+	border: 0;
+	font: inherit;
+}
+
+.dropdown.is-closed > button:after {
+	content: ' \21D2';
+}
+
+.dropdown.is-open > button:after {
+	content: ' \21D3';
+}
+
+.dropdown a:hover,
+.dropdown a:focus {
+	color: #07B4BA;
+	background-color: #EEE;
 }

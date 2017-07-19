@@ -254,10 +254,6 @@ a .chevron--right, a .chevron--left {
   width: 24px;
 }
 
-svg .st0 {
-  stroke: #c00;
-}
-
 .link--add, .link--add:visited {
   color: #a6dc3c;
 }
@@ -291,6 +287,8 @@ p {
 blockquote {
   margin: 1em 3em;
   max-width: 36em;
+  font-style: italic;
+  font-family: serif;
 }
 
 small {
@@ -916,13 +914,11 @@ figure img {
 figcaption {
   padding: 1em;
   text-align: center;
-  color: #888;
   max-width: 38em;
   margin: 0 auto;
 }
 figcaption .title {
   font-size: 1em;
-  color: #310031;
 }
 
 @media all and (min-width: 768px) {
@@ -1077,9 +1073,6 @@ table tfoot td, table tfoot th {
   color: rgba(0, 0, 0, 0.8);
   background-color: #dae5e5;
   vertical-align: middle;
-  -moz-border-radius: 36px;
-  -webkit-border-radius: 36px;
-  border-radius: 36px;
 }
 .alert .alert:after, .alert .alert:before {
   bottom: 100%;
@@ -1217,9 +1210,7 @@ label {
   display: block;
   padding: 0.2em 0.5em 0;
   margin: 0;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #999;
+  font-size: 0.875em;
 }
 
 .label--centered {
@@ -1328,8 +1319,12 @@ label.checkbox + label.checkbox {
   color: #3D8231;
 }
 
-.input--error, .has-errors input {
-  border-bottom-color: #d00;
+.input--error, .has-error input {
+  border-left: solid 2px #d00;
+}
+
+.has-error label {
+  color: #d00;
 }
 
 .radio-group-label--error, .checkbox-group-label--error {
@@ -1584,91 +1579,43 @@ button + .help--block {
     display: none;
   }
 }
-/*
-// accessible dropdown nav
-*/
-/*! requires Adobe's http://adobe-accessibility.github.io/Accessible-Mega-Menu/
-// http://terrillthompson.com/tests/menus/accessible-mega-menu/js/jquery-accessibleMegaMenu.js
- */
-/* mega menu list */
-.nav-menu {
+.dropdown {
+  width: 10em;
+  border: 1px solid #CCC;
+}
+
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: 0;
+}
+
+.dropdown a,
+.dropdown button {
   display: block;
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  z-index: 15;
-}
-
-/* a top level navigation item in the mega menu */
-.nav-item {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item > a,
-.sub-nav li > a {
-  position: relative;
-  display: inline-block;
-  padding: 0.5em 1em;
-  height: 2.6em;
-}
-.nav-item > a:hover,
-.sub-nav li > a:hover {
+  padding: .25em .5em;
   text-decoration: none;
-}
-.nav-item > a:hover, .nav-item > a:focus, .nav-item > a.open,
-.sub-nav li > a:hover,
-.sub-nav li > a:focus,
-.sub-nav li > a.open {
-  background-color: #eee;
+  color: #000;
+  background-color: #FFF;
 }
 
-/* first descendant link within a top level navigation item */
-.nav-item > a {
-  position: relative;
-  display: inline-block;
-  padding: 0.5em 1em;
-  height: 2.6em;
-  	/* focus/open states of first descendant link within a top level
-     navigation item */
-}
-.nav-item > a:hover {
-  text-decoration: none;
-}
-.nav-item > a.open {
-  z-index: 1;
+.dropdown button {
+  border: 0;
+  font: inherit;
 }
 
-/* sub-navigation panel */
-.sub-nav {
-  position: absolute;
-  display: none;
-  top: 2.6em;
-  background-color: #eee;
+.dropdown.is-closed > button:after {
+  content: ' \21D2';
 }
 
-.nav-item:hover .sub-nav {
-  display: block;
+.dropdown.is-open > button:after {
+  content: ' \21D3';
 }
 
-/* sub-navigation panel open state */
-/* list of items within sub-navigation panel */
-.sub-nav ul {
-  display: inline-block;
-  list-style-type: none;
-  vertical-align: top;
-  margin: 0 1em 0 0;
-  padding: 0;
-}
-
-/* list item within sub-navigation panel */
-.sub-nav li {
-  display: block;
-  margin: 0;
-  padding: 0;
+.dropdown a:hover,
+.dropdown a:focus {
+  color: #07B4BA;
+  background-color: #EEE;
 }
 
 .callout {

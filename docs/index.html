@@ -10,9 +10,6 @@
 		}
 	</style>
 
-	<script src="bundle.js"></script>
-	<script src="../node_modules/responsive-nav/responsive-nav.min.js" charset="utf-8"></script>
-	<script src="main.js"></script>
 </head>
 <body>
 
@@ -55,62 +52,24 @@
 			<div class="medium-10 column">
 
 
-		<nav id="dropmenu">
-			<ul class="nav-menu">
-				<li class="nav-item">
-					<a href="somepage.html">Dropdown menu</a>
-					<div class="sub-nav">
-						<!-- can have multiple subnavs -->
-						<ul class="sub-nav-group">
-							<li><a href="somepage.html">Accessibility</a></li>
-							<li><a href="somepage.html">Admissions</a></li>
-							<li><a href="somepage.html">Diversity</a></li>
-							<li><a href="somepage.html">Governance</a></li>
-						</ul>
-						<ul class="sub-nav-group">
-							<li><a href="somepage.html">Leadership</a></li>
-							<li><a href="somepage.html">Mission Statement</a></li>
-							<li><a href="somepage.html">Research</a></li>
-							<li><a href="somepage.html">Teaching</a></li>
-						</ul>
-						<ul class="sub-nav-group">
-							<li><a href="somepage.html">Contact Us</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<script>
-			$(document).ready(function() {
+<div class="dropdown" data-directive="dropdown">
+    <button type="button" data-behaviour="button" id="foo">Dropdown menu button</button>
+    <div id="menu-01" data-behaviour="menu">
+        <ul>
+            <li>
+                <a data-behaviour="option" href="">Option 1</a>
+            </li>
+            <li>
+                <a data-behaviour="option" href="">Option 2</a>
+            </li>
+            <li>
+                <a data-behaviour="option" href="">Option 3</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-				$('#dropmenu').accessibleMegaMenu({
-					/* prefix for generated unique id attributes, which are required
-					   to indicate aria-owns, aria-controls and aria-labelledby */
-					uuidPrefix: "accessible-megamenu",
 
-					/* css class used to define the megamenu styling */
-					menuClass: "nav-menu",
-
-					/* css class for a top-level navigation item in the megamenu */
-					topNavItemClass: "nav-item",
-
-					/* css class for a megamenu panel */
-					panelClass: "sub-nav",
-
-					/* css class for a group of items within a megamenu panel */
-					panelGroupClass: "sub-nav-group",
-
-					/* css class for the hover state */
-					hoverClass: "hover",
-
-					/* css class for the focus state */
-					focusClass: "focus",
-
-					/* css class for the open state */
-					openClass: "open"
-				});
-			});
-		</script>
 
 
 
@@ -571,12 +530,6 @@
 
 						<p><a href="#" class="btn btn--submit">.btn--has-icon inline checkmark svg</a></p>
 
-						<script>
-							$('.btn--submit').on('click', function() {
-								event.preventDefault();
-								$(this).addClass('btn--has-icon').prepend('<svg class="icon icon--inverse animated-check"><use xlink:href="#icon--check" /></svg> ');
-							});
-						</script>
 					</div>
 					<div class="small-6 column">
 						<p><a href="#" class="link--padded">.link--padded</a></p>
@@ -621,6 +574,12 @@
 	<footer role="contentinfo">
 		<p>sticky-footer</p>
 	</footer>
+
+
+
+	
+	<script src="bundle.js"></script>
+
 
 </body>
 </html>

@@ -21,7 +21,6 @@ $warning-bg		: #f9ebb2 !default;
 	color: rgba(0,0,0,0.8);
 	background-color: $alert-bg;
 	vertical-align: middle;
-	@include border-radius($alert-height);
 
 	.alert:after, .alert:before {
 		bottom: 100%;

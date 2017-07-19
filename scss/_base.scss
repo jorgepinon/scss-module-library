@@ -68,6 +68,7 @@ a {
 	}
 }
 
+// my preference is that *all* links should be padded
 .link--padded {
 	padding: 12px 0;
 	white-space: nowrap;
@@ -80,10 +81,6 @@ a {
 
 .link--icon {
 	width: 24px;
-}
-
-svg .st0 {
-	stroke: #c00;
 }
 
 .link--add, .link--add:visited {
@@ -120,6 +117,8 @@ p {
 blockquote {
 	margin: 1em 3em;
 	max-width: 36em;
+	font-style: italic;
+	font-family: serif;
 }
 small {
 	font-size: .85em;

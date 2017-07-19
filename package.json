@@ -9,8 +9,9 @@
   ],
   "main": "index.html",
   "scripts": {
+    "start": "webpack --config webpack.config.js",
     "lint": "eslint src/**.js",
-    "js-bundle": "cat node_modules/jquery/dist/jquery.min.js src/vendor/*.js src/modules/*.js > demo/bundle.js",
+    "js-bundle": "cat node_modules/jquery/dist/jquery.min.js src/vendor/*.js src/modules/*.js > docs/bundle.js",
     "build-js": "npm run js-bundle",
     "watch-js": "watch-run -p 'src/**' & npm run build-js"
   },
@@ -25,10 +26,11 @@
   },
   "homepage": "https://github.com/jorgepinon/scss-module-library#readme",
   "devDependencies": {
-    "eslint": "^3.2.2",
     "browserify": "latest",
+    "eslint": "^3.2.2",
     "uglify-js": "~2.4",
-    "watch-run": "~1.2"
+    "watch-run": "~1.2",
+    "webpack": "^3.3.0"
   },
   "dependencies": {
     "jquery": "^3.1.0",
