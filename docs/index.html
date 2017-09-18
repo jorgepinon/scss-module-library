@@ -34,11 +34,13 @@
 						<li><a href="#alerts">alerts</a></li>
 						<li><a href="#tags">tags</a></li>
 						<li><a href="#figure">figure</a></li>
+						<li><a href="#media-object">media object</a></li>
 						<li><a href="#card">card</a></li>
 						<li><a href="#forms">forms</a></li>
 						<li><a href="#button">button</a></li>
 						<li><a href="#callout">callout</a></li>
 						<li><a href="#popup">poput</a></li>
+						<li><a href="#utilities">utilities</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -414,6 +416,41 @@
 
 				<hr>
 
+				<div id="media-object">
+
+					<h2>Media Object</h2>
+					<p>Proper credit to <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan</a>.</p>
+
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img src="https://upload.wikimedia.org/wikipedia/en/f/f7/TheGreatGatsby_1925jacket.jpeg" class="media-object" alt="cover image of the Great Gatsby">
+							</a>
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Gatsby believed…</h3>
+							<p>… in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that's
+							no matter—tomorrow we will run faster, stretch out our arms farther…. And one fine morning–</p>
+						</div>
+					</div>
+
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/F_Scott_Fitzgerald_1921.jpg/440px-F_Scott_Fitzgerald_1921.jpg" class="media-object" alt="F. Scott Fitzgerald photo">
+							</a>
+						</div>
+						<div class="media-body media-middle">
+							<p>So we beat on, boats against the current, borne back ceaselessly into the past.</p>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<hr>
+
 				<div id="card" class="cards">
 
 					<h2>card</h2>
@@ -515,7 +552,6 @@
 
 				<hr id="btn">
 
-
 				<h2>buttons</h2>
 				<div class="row">
 					<div class="small-6 column">
@@ -542,6 +578,29 @@
 
 					</div>
 
+				</div>
+
+
+
+				<hr id="utilities">
+
+				<h2>Utilities</h2>
+
+				<h3>Vertical Centering</h3>
+				<div class="row">
+					<div class="small-6 column">
+						<div class="box" style="height: 70vw; background: #eee;">
+							<div class="outer">
+								<div class="middle">
+									<div class="inner">
+										<p>The simplest, widely-supported method I found was to add three divs within a container. And that container needs to have a defined height. Note that the .box container is set to 300px height for this example. You need a container with a defined height (probably adjusted with media queries as needed)</p>
+										<p>I know it sucks but I prefer to add html than to add javascript. Not sure why. Maybe because I hate to think of binding to the window resize event. Both options suck, really.</p>
+										<p>Another option is to use display: table-cell, except that controlling column widths is not widely supported.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 

@@ -21,6 +21,7 @@ $button-height 				: 40px !default;
 	border: 0;
 	outline: 0;
 	line-height: $button-height;
+	vertical-align: top;
 
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
