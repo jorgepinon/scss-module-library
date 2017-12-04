@@ -31,13 +31,13 @@ $default-border-radius: $border-radius;
 
 
 // palette
-$black 			: #1e2023;
-$dark-grey 		: #303238;
-$text			: #310031;
-$grey 			: #555963;
-$light-grey 	: #d2d2d2;
+$black 			: #030609;
+$dark-grey 		: #333639;
+$grey 			: #535659;
+$light-grey 	: #f1f2f3;
 $white 			: #fafafa;
 
+$text				: $grey;
 $body-bg 			: $white;
 $body-color 		: $text;
 $page-bg 			: $body-bg;
@@ -49,7 +49,7 @@ $secondary-color	: #B53D19;
 $border-color    	: $light-grey;
 $border-width    	: 1px;
 $border-style   	: solid;
-$overlay-bg			: rgb(23,20,43);
+$overlay-bg			: $black;
 $overlay-color		: $light-grey;
 
 $link-color 			: #177a70;

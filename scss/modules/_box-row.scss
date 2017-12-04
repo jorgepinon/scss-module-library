@@ -1,0 +1,30 @@
+.box-row {
+    display: table;
+    position: relative;
+    clear: both;
+    float: none;
+    width: 100%;
+}
+
+.box-row-item {
+    display: table;
+    position: relative;
+    float: left;
+    display: block;
+    margin-left: 2.99%;
+    width: 31%;
+    background-color: $light-grey;
+    padding-bottom: 30%;
+    text-align: center;
+	@include transition(all .2s ease-in-out);
+}
+.box-row-item:first-child {
+	margin-left: 0;
+}
+.box-row-item-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+	@include transform(translate(-50%, -50%));
+}

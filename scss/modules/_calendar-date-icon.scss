@@ -1,0 +1,67 @@
+/* ------------------------------------------
+  Calendar Date Icon
+  uses hCalendar microformat: http://microformats.org/wiki/html5
+--------------------------------------------- */
+
+/* usage:
+<a class="vevent vevent-card" href="#">
+	<span class="summary visuallyhidden">Splatoon Battle!</span>
+	<time class="dtstart" datetime="2018-05-01">
+		<span class="month">May</span> 
+		<span class="day">1</span>
+		<span class="year">2018</span>
+	</time>
+</a>
+*/
+
+.vevent-card,
+.vevent-card:visited {
+  border: solid 1px #ccc;
+  background-color: #f6f6f6;
+  padding: 0.6em 1em 1em;
+  float: left;
+  overflow: hidden;
+  margin: 0.25em;
+  text-decoration: none;
+  -webkit-transiiton: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+.vevent-card:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.dtstart {
+  text-align: center;
+  line-height: 1;
+}
+
+.dtstart .month,
+.dtstart .year {
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+  font-family: verdana, sans-serif;
+}
+
+.dtstart .day {
+  display: block;
+  font-size: 5em;
+  padding: 0.1em;
+  letter-spacing: -0.02em;
+  width: 1.15em;
+  color: #333;
+  font-family: impact, sans-serif;
+  font-weight: bold;
+}
+
+.visuallyhidden {
+  overflow : hidden;
+  position : absolute;
+  clip : rect(0 0 0 0);
+  height : 1px;
+  width : 1px;
+  margin : -1px;
+  padding : 0;
+  border : 0;
+ }

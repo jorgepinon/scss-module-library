@@ -193,7 +193,7 @@ html, body {
 
 html {
   -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: #ffb1ff;
+  -webkit-tap-highlight-color: white;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-size: 15px;
@@ -207,7 +207,7 @@ body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #310031;
+  color: #535659;
 }
 
 @media screen and (min-width: 768px) {
@@ -263,14 +263,14 @@ a .chevron--right, a .chevron--left {
 }
 
 ::-moz-selection {
-  background-color: #d2d2d2;
-  color: #310031;
+  background-color: #f1f2f3;
+  color: #535659;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #d2d2d2;
-  color: #310031;
+  background-color: #f1f2f3;
+  color: #535659;
   text-shadow: none;
 }
 
@@ -897,8 +897,8 @@ footer[role="contentinfo"] {
   position: relative;
   z-index: 100;
   padding: 1em;
-  background-color: #1C152D;
-  color: #edf;
+  background-color: #333639;
+  color: #fafafa;
   opacity: 0.95;
 }
 .masthead .logo {
@@ -1080,7 +1080,7 @@ table {
 }
 table th, table td {
   padding: 1em;
-  border-top: 1px solid #d2d2d2;
+  border-top: 1px solid #f1f2f3;
   line-height: 1.3;
   vertical-align: top;
   text-align: left;
@@ -1098,7 +1098,7 @@ table thead tr:first-child th {
   border-top: 0;
 }
 table tfoot {
-  border-top: 1px solid #d2d2d2;
+  border-top: 1px solid #f1f2f3;
   font-size: 0.875em;
   color: #999;
 }
@@ -1108,12 +1108,12 @@ table tfoot td, table tfoot th {
 }
 
 .table--bordered {
-  border: 1px solid #d2d2d2;
+  border: 1px solid #f1f2f3;
   border-left: 0;
   border-collapse: separate;
 }
 .table--bordered th, .table--bordered td {
-  border-left: 1px solid #d2d2d2;
+  border-left: 1px solid #f1f2f3;
 }
 .table--bordered tbody:first-child tr:first-child th,
 .table--bordered tbody:first-child tr:first-child td {
@@ -1233,8 +1233,8 @@ textarea {
   margin-left: 0;
   padding: 1em;
   background-color: #fafafa;
-  color: #1e2023;
-  border: 1px solid #d2d2d2;
+  color: #030609;
+  border: 1px solid #f1f2f3;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1248,7 +1248,7 @@ textarea {
 input,
 textarea {
   width: 100%;
-  border-top-color: #9f9f9f;
+  border-top-color: #babfc4;
 }
 
 textarea {
@@ -1314,7 +1314,7 @@ input:focus {
 
 select:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #d2d2d2;
+  outline: thin dotted #f1f2f3;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -1425,7 +1425,7 @@ button + .help--block {
   background-color: transparent;
 }
 .label-wrapped-input span:hover {
-  background-color: #970097;
+  background-color: #85898d;
 }
 
 .label-wrapped-input input[type="radio"],
@@ -1438,8 +1438,8 @@ button + .help--block {
 }
 .label-wrapped-input input[type="radio"]:checked + span,
 .label-wrapped-input input[type="checkbox"]:checked + span {
-  background-color: #970097;
-  color: #310031;
+  background-color: #85898d;
+  color: #535659;
 }
 
 .label-wrapped-input--inline {
@@ -1681,6 +1681,45 @@ button + .help--block {
   background-color: #ddd;
 }
 
+.box-row {
+  display: table;
+  position: relative;
+  clear: both;
+  float: none;
+  width: 100%;
+}
+
+.box-row-item {
+  display: table;
+  position: relative;
+  float: left;
+  display: block;
+  margin-left: 2.99%;
+  width: 31%;
+  background-color: #f1f2f3;
+  padding-bottom: 30%;
+  text-align: center;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.box-row-item:first-child {
+  margin-left: 0;
+}
+
+.box-row-item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .callout {
   padding: 2em;
   background: #fff;
@@ -1689,7 +1728,7 @@ button + .help--block {
 .footnotes {
   margin: 6em 0 3em;
   padding: 1em;
-  border-top: solid 1px #d2d2d2;
+  border-top: solid 1px #f1f2f3;
   list-style: none;
   font-size: 0.75em;
 }
@@ -1870,7 +1909,7 @@ input[type="color"] {
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #17142b;
+  background: #030609;
   transition: all 0.3s;
   opacity: 0;
 }
@@ -2101,4 +2140,70 @@ input[type="color"] {
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
+}
+/* ------------------------------------------
+  Calendar Date Icon
+  uses hCalendar microformat: http://microformats.org/wiki/html5
+--------------------------------------------- */
+/* usage:
+<a class="vevent vevent-card" href="#">
+	<span class="summary visuallyhidden">Splatoon Battle!</span>
+	<time class="dtstart" datetime="2018-05-01">
+		<span class="month">May</span> 
+		<span class="day">1</span>
+		<span class="year">2018</span>
+	</time>
+</a>
+*/
+.vevent-card,
+.vevent-card:visited {
+  border: solid 1px #ccc;
+  background-color: #f6f6f6;
+  padding: 0.6em 1em 1em;
+  float: left;
+  overflow: hidden;
+  margin: 0.25em;
+  text-decoration: none;
+  -webkit-transiiton: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.vevent-card:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.dtstart {
+  text-align: center;
+  line-height: 1;
+}
+
+.dtstart .month,
+.dtstart .year {
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+  font-family: verdana, sans-serif;
+}
+
+.dtstart .day {
+  display: block;
+  font-size: 5em;
+  padding: 0.1em;
+  letter-spacing: -0.02em;
+  width: 1.15em;
+  color: #333;
+  font-family: impact, sans-serif;
+  font-weight: bold;
+}
+
+.visuallyhidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
